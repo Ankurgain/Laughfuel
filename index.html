@@ -1,74 +1,122 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fact Fuel</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-        }
-        header {
-            background-color: #1e1e1e;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            color: #ff9800;
-            margin: 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        .post {
-            background-color: #1e1e1e;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .ad {
-            background-color: #333;
-            color: #bbb;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #1e1e1e;
-            color: #aaa;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaughFuel - Memes & Funny Videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf2;
+      color: #333;
+    }
+    header {
+      background: #ffd600;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    nav {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+    }
+    .search-container {
+      text-align: center;
+      padding: 20px;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .item {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .item img, .item iframe {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .adsense-placeholder {
+      margin: 20px auto;
+      text-align: center;
+      background: #eee;
+      padding: 10px;
+      border: 2px dashed #ccc;
+    }
+    footer {
+      background: #ffd600;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Fact Fuel</h1>
-        <p>Daily Interesting Facts & Earning Tips</p>
-    </header>
-    <div class="container">
-        <div class="ad">Ad Space (e.g., AdSense)</div>
-        <div class="post">
-            <h2>Top Fact: Human Brain Power</h2>
-            <p>The human brain can generate up to 23 watts of power — enough to power a lightbulb.</p>
-        </div>
-        <div class="post">
-            <h2>Earn from Your Mobile</h2>
-            <p>You can earn money online using Android apps like Upwork, Fiverr, or by blogging.</p>
-        </div>
-        <div class="ad">Ad Space (e.g., Sponsored Content)</div>
-        <div class="post">
-            <h2>Life Tip: Boost Focus</h2>
-            <p>Turn off phone notifications and take short breaks every 25 minutes to stay focused.</p>
-        </div>
+<body>  <header>
+    <h1>LaughFuel</h1>
+    <p>Memes & Funny Videos Daily</p>
+  </header>  <nav>
+    <a href="#">Home</a>
+    <a href="#">Memes</a>
+    <a href="#">Videos</a>
+    <a href="#">Contact</a>
+  </nav>  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search memes or videos..." onkeyup="filterItems()" />
+  </div>  <div class="adsense-placeholder">AdSense Banner Placeholder</div>  <div class="gallery" id="gallery">
+    <div class="item" data-tags="charger phone meme battery">
+      <img src="https://i.imgflip.com/5g8b0e.jpg" alt="Meme 1">
+      <p>When your phone is at 1% and you find the charger.</p>
     </div>
-    <footer>
-        &copy; 2025 Fact Fuel. All rights reserved.
-    </footer>
-</body>
+    <div class="item" data-tags="mom explain meme funny">
+      <img src="https://i.imgflip.com/30b1gx.jpg" alt="Meme 2">
+      <p>Me trying to explain a meme to my mom.</p>
+    </div>
+    <div class="item" data-tags="monday tired work morning">
+      <img src="https://i.imgflip.com/1bij.jpg" alt="Meme 3">
+      <p>Monday morning feels like this.</p>
+    </div>
+    <div class="item" data-tags="cat funny video compilation">
+      <iframe src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe>
+      <p>Funniest Cats Compilation</p>
+    </div>
+    <div class="item" data-tags="baby laugh video cute">
+      <iframe src="https://www.youtube.com/embed/kjK2OpgGk_0" frameborder="0" allowfullscreen></iframe>
+      <p>Baby Laughing Uncontrollably</p>
+    </div>
+  </div>  <div class="adsense-placeholder">AdSense Footer Placeholder</div>  <footer>
+    <p>&copy; 2025 LaughFuel. All rights reserved.</p>
+  </footer>  <script>
+    function filterItems() {
+      const input = document.getElementById('searchBox').value.toLowerCase();
+      const items = document.querySelectorAll('.item');
+      items.forEach(item => {
+        const tags = item.getAttribute('data-tags');
+        if (tags.includes(input)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script></body>
 </html>
